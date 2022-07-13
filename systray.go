@@ -9,11 +9,11 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/getlantern/golog"
+	apexlog "github.com/apex/log"
 )
 
 var (
-	log = golog.LoggerFor("systray")
+	log = apexlog.WithFields(apexlog.Fields{ })
 
 	systrayReady  func()
 	systrayExit   func()
